@@ -12,7 +12,6 @@
 
  # File Structure 
   ```
-- 
 - Src
      |__ database
               |_ config
