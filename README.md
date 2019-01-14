@@ -33,6 +33,10 @@
 - package.json
 - eslintrc.js
 ```
+
+ # Database schema 
+ ![](https://scontent.fjrs2-1.fna.fbcdn.net/v/t1.15752-9/49895342_371306640351737_5310681225613017088_n.jpg?_nc_cat=103&_nc_ht=scontent.fjrs2-1.fna&oh=48147803ea9f8626a3143ab19703b168&oe=5CBE32D4)
+ 
  # Variable rules
   - CamelCase
   - indentation tab
