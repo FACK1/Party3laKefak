@@ -6,7 +6,7 @@ const media = seq.define('media',{
     type: Sequelize.STRING,
     allowNull: false
   },
-  imageUrl: {
+  image_url: {
     type: Sequelize.STRING,
     allowNull: false
   },

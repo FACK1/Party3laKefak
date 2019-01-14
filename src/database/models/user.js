@@ -4,7 +4,8 @@ const seq = require('../config/dbConnection');
 const user = seq.define('user',{
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    unique:true
   },
   password: {
     type: Sequelize.STRING,
@@ -13,6 +14,7 @@ const user = seq.define('user',{
   email: {
     type: Sequelize.STRING,
     allowNull: false,
+    unique:true,
     validate: {
       isEmail: true,            // checks for email format (foo@bar.com)
       isNumeric: true,          // will only allow numbers
@@ -24,7 +26,7 @@ const user = seq.define('user',{
     type: Sequelize.STRING,
     allowNull: false
   },
-  phoneNumber: {
+  phone_number: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
@@ -33,7 +35,7 @@ const user = seq.define('user',{
       len: [0,15],              // only allow values with length between 2 and 10
     }
   },
-  extraInformation: {
+  extra_information: {
     type: Sequelize.STRING,
     allowNull: true
   },

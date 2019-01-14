@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const seq = require('../config/dbConnection');
 
-const serviceDetails = seq.define('serviceDetails',{
+const serviceDetails = seq.define('service_details',{
   name: {
     type: Sequelize.STRING,
     allowNull: false
@@ -18,7 +18,7 @@ const serviceDetails = seq.define('serviceDetails',{
     type: Sequelize.STRING,
     allowNull: false
   },
-  mapLoc: {
+  map_loc: {
     type: Sequelize.STRING,
     allowNull: true
   },

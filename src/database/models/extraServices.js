@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize');
 const seq = require('../config/dbConnection');
 
-const extraServices = seq.define('extraServices',{
-  extraName: {
+const extraServices = seq.define('extra_services',{
+  extra_name: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  extraDetails: {
+  extra_details: {
     type: Sequelize.STRING,
     allowNull: false
   },

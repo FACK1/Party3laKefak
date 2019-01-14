@@ -6,19 +6,19 @@ const user = require('../models/user');
 const db = require('../config/dbConnection.js');
 
 serviceDetails.belongsTo(user, {
-  onDelete: 'CASCADE', forignKey: 'userId', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'user_id', targetKey: 'id'
 });
 
 serviceDetails.belongsTo(services, {
-  onDelete: 'CASCADE', forignKey: 'serviceId', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'service_id', targetKey: 'id'
 });
 
 extraServices.belongsTo(serviceDetails, {
-  onDelete: 'CASCADE', forignKey: 'serviceDetailsId', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'serviceDetails_id', targetKey: 'id'
 });
 
 media.belongsTo(serviceDetails, {
-  onDelete: 'CASCADE', forignKey: 'serviceDetailsId', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'serviceDetails_id', targetKey: 'id'
 });
 
 const seq = new Promise((resolve, reject) => {
