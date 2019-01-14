@@ -1,7 +1,6 @@
 const app = require('./app.js')
-//const seq = require('./models/index.js');
+const seq = require('../database/models/index.js');
 const db = require('../database/config/dbConnection.js');
-
 
 db.authenticate()
   .then(()=>console.log('DB connected'))
