@@ -11,7 +11,29 @@
   - As a user I can go back from every page to home page or to a previous page .
 
  # File Structure 
-  -
+  ```
+- 
+- Src
+     |__ database
+              |_ config
+                    |_ dbConnection.js
+              |_ modules
+                    |_ extraservices.js
+                    |_ media.js
+                    |_ servicedetails.js
+                    |_ services.js
+                    |_ user.js
+    |__ backEnd
+              |_ app.js
+              |_ server.js
+    |__ frontEnd
+              |_ views
+
+- gitignore
+- .travis.yml
+- package.json
+- eslintrc.js
+```
  # Variable rules
   - CamelCase
   - indentation tab
