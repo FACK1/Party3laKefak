@@ -14,11 +14,11 @@ serviceDetails.belongsTo(services, {
 });
 
 extraServices.belongsTo(serviceDetails, {
-  onDelete: 'CASCADE', forignKey: 'serviceDetails_id', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'service_details_id', targetKey: 'id'
 });
 
 media.belongsTo(serviceDetails, {
-  onDelete: 'CASCADE', forignKey: 'serviceDetails_id', targetKey: 'id'
+  onDelete: 'CASCADE', forignKey: 'service_details_id', targetKey: 'id'
 });
 
 const seq = new Promise((resolve, reject) => {

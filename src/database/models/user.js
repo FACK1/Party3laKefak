@@ -17,9 +17,6 @@ const user = seq.define('user',{
     unique:true,
     validate: {
       isEmail: true,            // checks for email format (foo@bar.com)
-      isNumeric: true,          // will only allow numbers
-      notEmpty: true,           // don't allow empty strings
-      len: [2,60],              // only allow values with length between 2 and 10
     }
   },
   facebook: {
@@ -29,11 +26,6 @@ const user = seq.define('user',{
   phone_number: {
     type: Sequelize.STRING,
     allowNull: false,
-    validate: {
-      isNumeric: true,          // will only allow numbers
-      notEmpty: true,           // don't allow empty strings
-      len: [0,15],              // only allow values with length between 2 and 10
-    }
   },
   extra_information: {
     type: Sequelize.STRING,
