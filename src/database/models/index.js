@@ -27,4 +27,10 @@ const seq = new Promise((resolve, reject) => {
   }).catch((err) => {reject(err);});
 });
 
-module.exports =seq;
+module.exports = {
+user,
+	services,
+serviceDetails,
+media,
+seq
+};
