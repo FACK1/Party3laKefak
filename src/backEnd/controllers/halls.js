@@ -2,14 +2,12 @@
 const { serviceDetails } = require('../../database/models');
 
 exports.get = (req, res) => {
-// const { id } = 1;
 const { params: { id } } = req;
 serviceDetails.findAll({
 attributes: ['id', 'name'],
 raw: true
 })
 .then((result) => {
-// media.findOne({where:service_details_id})
 res.render('halls', { result });
 })
 .catch(() => {
