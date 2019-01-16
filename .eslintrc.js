@@ -4,7 +4,7 @@ module.exports = {
         "commonjs": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb-base",
     "parserOptions": {
         "ecmaVersion": 2016,
         "sourceType": "module"
@@ -20,7 +20,7 @@ module.exports = {
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
