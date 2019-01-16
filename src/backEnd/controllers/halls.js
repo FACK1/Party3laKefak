@@ -3,7 +3,9 @@ const { serviceDetails } = require('../../database/models');
 
 exports.get = (req, res) => {
 // const { id } = 1;
-serviceDetails.findAll({
+const { body: { id } } = req;
+console.log("IDDDD",id);
+serviceDetails.findAll({ where : { id },
 attributes: ['id', 'name'],
 raw: true
 })
