@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const services = require('../../database/models/services');
+const {services} = require('../../database/models');
 exports.get = (req, res) => {
   services.findAll({
   attributes: ['id','name'],
