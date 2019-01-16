@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const seq = require('../config/dbConnection');
 
 const media = seq.define('media',{
-  name: {
+	name: {
     type: Sequelize.STRING,
     allowNull: false
   },
