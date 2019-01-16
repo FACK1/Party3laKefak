@@ -13,11 +13,11 @@ app.engine(
   exphbs({
     extname: 'hbs',
     layoutsDir: path.join(__dirname, '..', 'views', 'layouts'),
+    partialsDir: path.join(__dirname,'..', 'views', 'partials'), 
     defaultLayout: 'main'
   })
 )
 app.use(routes)
-
 
 app.set('port', process.env.PORT || 8000)
 module.exports = app
