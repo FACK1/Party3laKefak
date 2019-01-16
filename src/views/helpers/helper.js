@@ -1,3 +1,3 @@
 module.exports = {
-  getLink: id => `/halls/${id}`,
+getLink: id => `/halls/${id}`,
 };
