@@ -2,11 +2,10 @@ const Sequelize = require('sequelize');
 const {services} = require('../../database/models');
 exports.get = (req, res) => {
   services.findAll({
-  attributes: ['name'],
+  attributes: ['id','name'],
    raw: true
   })
   .then((result)=>{
-      console.log("done",result);
       res.render('home', { result: result });
   })
    .catch(()=>{
