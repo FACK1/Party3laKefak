@@ -1,60 +1,72 @@
 {{>header}}
-<section class="mh5 ">
-     {{#each filteredResult}} 
+<section>
+     {{#each filteredResult}}
      <h2 class="black center tc mt0 f1 w-100 "style="background-color:#A29060" >{{details.name}}</h2>
+
        <div>
-         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[0]}}" alt="Halls">
-         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[1]}}" alt="Halls">
-         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[2]}}" alt="Halls">
+         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w10 h5" src="{{images.[0]}}" id="mainimg" alt="Halls" onclick="myfunction()">
+         <br>
+         <div class="mh3">
+         <div class="ml4">
+           <img class="f6 link dim br1 ba pv2 mb2 dib black w3 h3 ph1" src="{{images.[1]}}" alt="Halls" id="image1" onclick="myfunction()">
+           <img class="f6 link dim br1 ba pv2 mb2 dib black w3 h3 ph1" src="{{images.[2]}}" alt="Halls" id="image2" onclick="myfunction()">
+           <img class="f6 link dim br1 ba pv2 mb2 dib black w3 h3 ph1" src="{{images.[1]}}" alt="Halls" id="image3" onclick="myfunction()">
+           <img class="f6 link dim br1 ba pv2 mb2 dib black w3 h3 ph1" src="{{images.[2]}}" alt="Halls" id="image4" onclick="myfunction()">
+         </div>
        </div>
-       <div>
+<div class="mh3">
   <article class="cf">
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
-    <h3>Owner Name</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-gray bg-near-white tc ma2">
+    <h2>Owner Name</h2>
   </div>
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
-    <h3>{{details.user.name}}</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-yellow ph3 ma2 tc">
+    <h2>{{details.user.name}}</h2>
   </div>
   <!-- ////////////////// -->
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
-    <h3>Price</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-gray bg-near-white tc ma2">
+    <h2>Price</h2>
   </div>
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
-    <h3>{{details.price}}</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-yellow ph3 ma2 tc">
+    <h2>{{details.price}}</h2>
   </div>
   <!-- ////////////// -->
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
-    <h3>Size</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-gray bg-near-white tc ma2">
+    <h2>Size</h2>
   </div>
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
-    <h3>{{details.description}}</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-yellow ph3 ma2 tc">
+    <h2>{{details.description}}</h2>
   </div>
   <!-- ///////////////////////// -->
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
-    <h3>Location</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-gray bg-near-white tc ma2">
+    <h2>Location</h2>
   </div>
-  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
-    <h3>{{details.location}}</h3>
+  <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-yellow ph3 ma2 tc">
+    <h2>{{details.location}}</h2>
   </div>
 </article>
+<h1 class="tl">Contact to Owner</h1>
 
-   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3">
-     <img src="../assets/email.png" alt="email" class="w1 h1 ml4 mb2">
-     {{details.user.email}}
-   </div>
-   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3">
-     <img src="../assets/phone.png" alt="phone" class="w1 h1 ml4 mb2">
-     {{details.user.phone_number}}
-   </div>
-   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3 tc">
-     <img src="../assets/facebook.png" alt="facebook" class="w1 h1 ml3 mb2">
-     <br>
-     {{details.user.facebook}}
-   </div>
+<div class="ml5">
+  <div class="f6 link dim br1 ph1 pv2 mb2 dib white bg-black w-25 h3 mt2 tc">
+    <img src="../assets/email.png" alt="email" class="w1 h1 mb2">
+    {{details.user.email}}
+  </div>
+  <div class="f6 link dim br1 ph1 pv2 mb2 dib white bg-black w-25 h3 mt2 tc">
+    <img src="../assets/phone.png" alt="phone" class="w1 h1 mb2 ml2">
+    <br>
+    {{details.user.phone_number}}
+  </div>
+  <div class="f6 link dim br1 ph1 pv2 mb2 dib white bg-black w-25 h3 tc">
+    <img src="../assets/facebook.png" alt="facebook" class="w1 h1 mb2">
+    <br>
+    {{details.user.facebook}}
+  </div>
+
+</div>
 
        <!-- <p>Map Location {{details.map_loc}}</p>
        <p>Calender </p> -->
        {{/each}}
-
+</div>
  </section>
 {{>footer}}
