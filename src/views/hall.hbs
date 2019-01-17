@@ -1,15 +1,53 @@
+{{>header}}
 <section>
      {{#each result}}
+     <h2 class="black center tc mt0 f1 "style="background-color:#A29060" >{{service_detail.name}}</h2>
        <div>
          <img src="{{image_url}}" alt="Halls">
        </div>
+       <div>
+         <div class="cf pa2">
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">Owner Name</dd>
+           </div>
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">{{service_detail.user.name}}</dd>
+           </div>
+         </div>
+         <div class="cf pa2">
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">Price</dd>
+           </div>
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">{{service_detail.price}}</dd>
+           </div>
+         </div>
+         <div class="cf pa2">
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">Size</dd>
+           </div>
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">{{service_detail.description}}</dd>
+           </div>
+         </div>
+         <div class="cf pa2">
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">Location</dd>
+           </div>
+           <div class="fl w-50 w-25-m w-20-l pa2">
+                 <dd class="black">{{service_detail.location}}</dd>
+           </div>
+         </div>
 
-       <p>{{service_detail.name}}</p>
-       <p>{{service_detail.location}}</p>
-       <p>{{service_detail.price}}</p>
-       <p>{{service_detail.description}}</p>
+         <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black">
+jksdjs
+         </div>
+
        <p>{{service_detail.map_loc}}</p>
-       <p>{{service_detail.userId}}</p>
+       <p>{{service_detail.user.email}}</p>
+       <p>{{service_detail.user.phone_number}}</p>
+      Hint : His FaceBook name is ali ali ::>> <p>{{service_detail.user.facebook}}</p>
        {{/each}}
 
  </section>
+{{>footer}}
