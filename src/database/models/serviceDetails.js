@@ -22,6 +22,10 @@ const serviceDetails = seq.define('service_details',{
     type: Sequelize.STRING,
     allowNull: true
   },
+  image_url: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
   createdAt : {
     type: Sequelize.DATE(3),
     defaultValue: Sequelize.literal('NOW()'),
