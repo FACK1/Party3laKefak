@@ -1,52 +1,59 @@
 {{>header}}
-<section>
-     {{#each result}}
-     <h2 class="black center tc mt0 f1 "style="background-color:#A29060" >{{service_detail.name}}</h2>
+<section class="mh5 ">
+     {{#each filteredResult}} 
+     <h2 class="black center tc mt0 f1 w-100 "style="background-color:#A29060" >{{details.name}}</h2>
        <div>
-         <img src="{{image_url}}" alt="Halls">
+         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[0]}}" alt="Halls">
+         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[1]}}" alt="Halls">
+         <img class="f6 link dim br1 ba ph3 pv2 mb2 dib black w4 h4" src="{{images.[2]}}" alt="Halls">
        </div>
        <div>
-         <div class="cf pa2">
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">Owner Name</dd>
-           </div>
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">{{service_detail.user.name}}</dd>
-           </div>
-         </div>
-         <div class="cf pa2">
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">Price</dd>
-           </div>
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">{{service_detail.price}}</dd>
-           </div>
-         </div>
-         <div class="cf pa2">
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">Size</dd>
-           </div>
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">{{service_detail.description}}</dd>
-           </div>
-         </div>
-         <div class="cf pa2">
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">Location</dd>
-           </div>
-           <div class="fl w-50 w-25-m w-20-l pa2">
-                 <dd class="black">{{service_detail.location}}</dd>
-           </div>
-         </div>
+  <article class="cf">
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
+    <h3>Owner Name</h3>
+  </div>
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
+    <h3>{{details.user.name}}</h3>
+  </div>
+  <!-- ////////////////// -->
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
+    <h3>Price</h3>
+  </div>
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
+    <h3>{{details.price}}</h3>
+  </div>
+  <!-- ////////////// -->
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
+    <h3>Size</h3>
+  </div>
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
+    <h3>{{details.description}}</h3>
+  </div>
+  <!-- ///////////////////////// -->
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-gray bg-near-white tc ma3">
+    <h3>Location</h3>
+  </div>
+  <div class="fl f6 w-50 w-30-ns br1 ba ph3 bg-light-yellow ph3 ma3 tc">
+    <h3>{{details.location}}</h3>
+  </div>
+</article>
 
-         <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black">
-jksdjs
-         </div>
+   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3">
+     <img src="../assets/email.png" alt="email" class="w1 h1 ml4 mb2">
+     {{details.user.email}}
+   </div>
+   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3">
+     <img src="../assets/phone.png" alt="phone" class="w1 h1 ml4 mb2">
+     {{details.user.phone_number}}
+   </div>
+   <div class="f6 link dim br1 ph3 pv2 mb2 dib white bg-black w4 h3 ma3 tc">
+     <img src="../assets/facebook.png" alt="facebook" class="w1 h1 ml3 mb2">
+     <br>
+     {{details.user.facebook}}
+   </div>
 
-       <p>{{service_detail.map_loc}}</p>
-       <p>{{service_detail.user.email}}</p>
-       <p>{{service_detail.user.phone_number}}</p>
-      Hint : His FaceBook name is ali ali ::>> <p>{{service_detail.user.facebook}}</p>
+       <!-- <p>Map Location {{details.map_loc}}</p>
+       <p>Calender </p> -->
        {{/each}}
 
  </section>
