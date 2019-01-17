@@ -1,10 +1,15 @@
+{{>header}}
 <section>
-     {{#each result}}
-       <div>
-         <img src="{{image_url}}" alt="Halls">
-         <a href="{{gethall id}}">
-         <p>{{name}}</p>
-         </a>
-       </div>
-       {{/each}}
- </section>
+  <h2 class="black center tc mt0 f1 "style="background-color:#A29060" >Halls</h2>
+</section>
+<section>
+{{#each result}}
+ <div class="w-80 center tc ba bw1 mt3">
+   <a href="{{gethall id}}" class="no-underline mt0 mb0 pa0" >
+    <img src={{image_url}} alt="{{name}}" class="mb0" >
+    <h2 style="background-color: #A29060; margin-top: -6px;" class="f2 mt0 mb0 black b"> {{name}}</h2>
+  </a>
+ </div>
+ {{/each}}
+</section>
+{{>footer}}
