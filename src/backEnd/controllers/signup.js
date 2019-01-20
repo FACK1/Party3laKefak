@@ -13,22 +13,24 @@ exports.post = (req, res) => {
     where: { email },
     attributes: ['email'],
   }).then((result) => {
-    if (!result) {
-      if (password === repassword) {
-        bcrypt.hash(password, 10, (hashErr, hashedPassword) => {
-          if (hashErr) {
-            res.send(hashErr);
-          }
-          user.create({
-            name, email, password: hashedPassword, phone_number, facebook //eslint-disable-line
-          })
-            .then((created) => {
-              res.send(created);
-            }).catch((err) => {
-              res.send(err);
-            });
-        });
-      }
+    if (result) {
+      res.render('signup', { message: 'email exsit' });
+      return;
     }
-  }).catch(() => res.status(500).json({ err: 'error in query' }));
+    if (password !== repassword) {
+      res.render('signup', { message: 'password & confirme password not match' });
+      return;
+    }
+    bcrypt.hash(password, 10, (hashErr, hashedPassword) => {
+      if (hashErr) res.send(hashErr);
+      user.create({
+            name, email, password: hashedPassword, phone_number, facebook //eslint-disable-line
+      })
+        .then(() => {
+          res.render('login', { message: 'Succesfuly register' });
+        }).catch((err) => {
+          res.send(err);
+        });
+    });
+  }).catch(err => res.send(err));
 };
