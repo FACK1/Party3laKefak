@@ -1,4 +1,3 @@
-
 const { serviceDetails } = require('../../database/models');
 
 exports.get = (req, res) => {
