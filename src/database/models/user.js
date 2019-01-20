@@ -5,7 +5,7 @@ const user = seq.define('user',{
   name: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique:true
+    unique: true
   },
   password: {
     type: Sequelize.STRING,
@@ -14,9 +14,9 @@ const user = seq.define('user',{
   email: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique:true,
+    unique: true,
     validate: {
-      isEmail: true,            // checks for email format (foo@bar.com)
+      isEmail: true,
     }
   },
   facebook: {
@@ -31,11 +31,11 @@ const user = seq.define('user',{
     type: Sequelize.STRING,
     allowNull: true
   },
-  createdAt : {
+  createdAt: {
     type: Sequelize.DATE(3),
     defaultValue: Sequelize.literal('NOW()'),
   },
-  updatedAt : {
+  updatedAt: {
     type: Sequelize.DATE(3),
     defaultValue: Sequelize.literal('NOW()'),
   }

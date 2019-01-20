@@ -1,50 +1,34 @@
 const bcrypt = require('bcryptjs');
-const Sequelize = require('sequelize');
-const {	user } = require('../../database/models');
+const { user } = require('../../database/models');
 
 exports.get = (req, res) => {
-	res.render('signup');
+  res.render('signup');
 };
 
 exports.post = (req, res) => {
-	const {
-		name,
-		email,
-		password,
-		phone_number,
-		facebook,
-		repassword
-	} = req.body
-	user.findOne({
-		where: {
-			email
-		},
-		attributes: ['email'],
-	}).then((result) => {
-		if (!result) {
-			if (password === repassword) {
-				bcrypt.hash(password, 8, (hashErr, hashedPassword) => {
-					if (hashErr) {
-						console.log(hashErr);
-					}
-					console.log("hashedPassword", hashedPassword);
-					var password = hashedPassword;
-					user.create({
-							name,
-							email,
-							password,
-							phone_number,
-							facebook
-						})
-						.then((created) => {
-							res.send(created)
-						}).catch((err) => {
-							console.log(err);
-						})
-				})
-			}
-		}
-	}).catch(() => res.status(500).json({
-		err: 'error in query'
-	}));
+  const {
+    name, email, password, phone_number, facebook, repassword
+  } = req.body;
+  user.findOne({
+    where: { email },
+    attributes: ['email'],
+  }).then((result) => {
+    if (!result) {
+      if (password === repassword) {
+        bcrypt.hash(password, 8, (hashErr, hashedPassword) => {
+          if (hashErr) {
+            res.send(hashErr);
+          }
+          user.create({
+            name, email, password: hashedPassword, phone_number, facebook
+          })
+            .then((created) => {
+              res.send(created);
+            }).catch((err) => {
+              res.send(err);
+            });
+        });
+      }
+    }
+  }).catch(() => res.status(500).json({ err: 'error in query' }));
 };
