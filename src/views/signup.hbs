@@ -1,0 +1,20 @@
+{{>header}}
+<div class="outerContainer">
+<form action="/signup" method="POST">
+  <h1 class="tc b" style="font-family:Monoton">SignUp</h1>
+  <div class="inputsContainer mv3 mh5">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="name" value="" placeholder="Full Name" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="email" name="email" value="" placeholder="Email" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="password" name="password" value="" placeholder="Password" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="password" name="repassword" value="" placeholder="Re Password" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="phone_number" value="" placeholder="Phone Number" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="facebook" value="" placeholder="Facebook" style="border-color:#a29061">
+
+
+</div>
+<div class="home-login">
+   <input class="b f4 w4 link dim br3 ph3 pv2 mb2 dib bg-black mh6" type="submit" name="submit" value="Sign up" style="color:#a29061; font-family:Montaga">
+
+</form>
+</div>
+<p>{{message}}</p>
