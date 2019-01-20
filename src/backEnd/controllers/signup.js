@@ -15,7 +15,7 @@ exports.post = (req, res) => {
   }).then((result) => {
     if (!result) {
       if (password === repassword) {
-        bcrypt.hash(password, 8, (hashErr, hashedPassword) => {
+        bcrypt.hash(password, 10, (hashErr, hashedPassword) => {
           if (hashErr) {
             res.send(hashErr);
           }
