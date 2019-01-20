@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/FACK1/Party3laKefak#readme",
   "dependencies": {
+    "bcrypt": "^3.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "env": "0.0.2",
     "env2": "^2.2.2",
     "eslint-config-airbnb-base": "^13.1.0",
