@@ -7,7 +7,7 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const {
-    name, email, password, phone_number, facebook, repassword
+    name, email, password, phone_number, facebook, repassword //eslint-disable-line
   } = req.body;
   user.findOne({
     where: { email },
@@ -20,7 +20,7 @@ exports.post = (req, res) => {
             res.send(hashErr);
           }
           user.create({
-            name, email, password: hashedPassword, phone_number, facebook
+            name, email, password: hashedPassword, phone_number, facebook //eslint-disable-line
           })
             .then((created) => {
               res.send(created);
