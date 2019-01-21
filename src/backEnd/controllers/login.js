@@ -18,12 +18,7 @@ exports.post = (req, res) => {
     raw: true,
   }).then((result) => {
     if (!result) {
-<<<<<<< Updated upstream
-      res.render('login', { message: 'email not found' });
-      return;
-=======
       return res.render('login', { message: 'email not found' });
->>>>>>> Stashed changes
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {
