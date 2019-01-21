@@ -16,12 +16,12 @@ exports.get = (req, res) => {
         raw: true,
         include: [{
           model: user,
-          attributes: ['name'],
         }],
       })
         .then((result) => {
-          res.render('profile', { result });
-          // res.send(result);
+          console.log('rees', result);
+          // res.render('profile', { result });
+          res.send(result);
         })
         .catch((error) => {
           // res.render('serverError');
