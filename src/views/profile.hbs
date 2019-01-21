@@ -1,5 +1,25 @@
 {{>header}}
+
+{{#each result}}
+
+Name: {{name}}
 <form action="/logout" method="GET">
-    <input type="submit" name="submit" value="logout">
+  <button type="submit" namesubmit="submit" style="background-color:rgba(0,0,0,0); border: none;" class="fr" > <img src="../assets/logout.png" alt="logout" class="w2 h2 mv2"> </button>
 </form>
+<a href="#"> <img src="../assets/editinfo.png" alt="" class="w2 h2 fr ma2"> </a>
+<a href="#"> <img src="../assets/add.png" alt="" class="w2 h2 fr ma2"> </a>
+<hr class="mt5 gray">
+<a href="/delete/{{id}}">
+  <div class="ba w7 h5 ma3 gray">
+    <h3 class="ma2">{{name}}</h3>
+    <h3 class="fl mb2 ma2">{{location}}</h3>
+    <h3 class="fr ma2 mr4 green">{{price}}</h3>
+    <br>
+    <img src="{{image_url}}" alt="" class="w6 h4 mt4">
+
+  </div>
+</a>
+
+{{/each}}
+
 <p>{{message}}</p>

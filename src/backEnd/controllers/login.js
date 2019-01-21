@@ -26,7 +26,7 @@ exports.post = (req, res) => {
       }
       if (result2) {
         const token = jwt.sign({ id: result.id, email }, SECRET);
-        res.cookie('logged_in', token, { maxAge: 999999999 }).render('profile');
+        res.cookie('logged_in', token, { maxAge: 999999999 }).redirect('/profile');
       }
     });
   }).catch(() => {

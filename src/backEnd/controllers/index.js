@@ -5,6 +5,7 @@ const signup = require('./signup');
 const login = require('./login');
 const logout = require('./logout');
 const hall = require('./hall');
+const profile = require('./profile.js');
 
 const router = express.Router();
 
@@ -19,6 +20,7 @@ router.post('/login', login.post);
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 
+router.get('/profile', profile.get);
 
 router.get('/logout', logout.get);
 
