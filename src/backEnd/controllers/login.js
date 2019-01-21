@@ -19,7 +19,6 @@ exports.post = (req, res) => {
   }).then((result) => {
     if (!result) {
       res.render('login', { message: 'email not found' });
-      return;
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {
@@ -30,7 +29,8 @@ exports.post = (req, res) => {
         res.cookie('logged_in', token, { maxAge: 999999999 }).render('profile');
       }
     });
-  }).catch(() => {
+  }).catch((error) => {
+    console.log(error);
     res.render('login', { message: 'email not found' });
   });
 };
