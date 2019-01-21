@@ -37,9 +37,11 @@
     <h2>Location</h2>
   </div>
   <div class="fl f6 w-40 w-30-ns br1 ba ph1 bg-light-yellow ph3 ma2 tc">
-    <h2>{{details.location}}</h2>
+    <h2>{{details.location}} </h2>
   </div>
 </article>
+<div id="mapid" style="height:180px;"></div>
+<p class="dn" id="att">{{details.map_loc}} </p>
 <h1 class="tl">Contact to Owner</h1>
 
 <div class="ml5">
@@ -58,9 +60,7 @@
     {{details.user.facebook}}
   </div>
 </div>
-<!-- <p>Map Location {{details.map_loc}}</p>
-     <p>Calender </p> -->
       {{/each}}
 </div>
  </section>
-{{>footer}}
+ {{>footer}}
