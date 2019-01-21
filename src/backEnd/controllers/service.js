@@ -4,7 +4,7 @@ exports.get = (req, res) => {
   const { params: { id } } = req;
   serviceDetails.findAll({
     where: { serviceId: id },
-    attributes: ['id', 'name', 'image_url', 'userId'],
+    attributes: ['id', 'name', 'image_url'],
     raw: true,
   })
     .then((result) => {
