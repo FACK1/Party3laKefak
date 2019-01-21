@@ -18,14 +18,11 @@ exports.post = (req, res) => {
     raw: true,
   }).then((result) => {
     if (!result) {
-      res.render('login', { message: 'email or password not match' });
+      res.render('login', { message: 'email not found' });
       return;
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {
-        res.send(err);
-      }
-      if (!result2) {
         res.render('login', { message: 'email or password not match' });
       }
       if (result2) {
@@ -33,5 +30,7 @@ exports.post = (req, res) => {
         res.cookie('logged_in', token, { maxAge: 999999999 }).render('profile');
       }
     });
-  }).catch(() => console.log('err'));
+  }).catch(() => {
+    res.render('login', { message: 'email not found' });
+  });
 };
