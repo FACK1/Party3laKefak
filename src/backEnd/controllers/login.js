@@ -19,10 +19,6 @@ exports.post = (req, res) => {
   }).then((result) => {
     if (!result) {
       res.render('login', { message: 'email not found' });
-<<<<<<< HEAD
-=======
-      return;
->>>>>>> master
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {

@@ -5,10 +5,6 @@ const signup = require('./signup');
 const login = require('./login');
 const logout = require('./logout');
 const hall = require('./hall');
-const signup = require('./signup');
-const login = require('./login');
-
-
 
 const router = express.Router();
 
@@ -16,8 +12,6 @@ router.get('/', services.get);
 router.get('/service/:id', service.get);
 router.get('/hall/:id', hall.get);
 router.get('/serverError');
-router.get('/signup', signup.get);
-router.post('/signup', signup.post);
 
 router.get('/login', login.get);
 router.post('/login', login.post);
@@ -25,8 +19,6 @@ router.post('/login', login.post);
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 
-router.get('/login', login.get);
-router.post('/login', login.post);
 
 router.get('/logout', logout.get);
 
