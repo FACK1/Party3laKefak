@@ -8,6 +8,9 @@ exports.get = (req, res) => {
     raw: true,
   })
     .then((result) => {
+      if (!result || result.length == 0) {
+        res.render('service', { message: 'No Results Exists !' });
+      }
       res.render('service', { result });
     })
     .catch(() => {
