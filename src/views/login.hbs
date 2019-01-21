@@ -1,7 +1,14 @@
 {{>header}}
+<div class="outerContainer">
 <form action="/login" method="POST">
-  <input class="inputs" type="email" name="email" value="" placeholder="Type your email..">
-  <input class="inputs" type="password" name="password" value="" placeholder="Type a password..">
-  <input type="submit" name="submit" value="login">
+  <h1 class="tc b" style="font-family:Monoton">Login</h1>
+  <div class="inputsContainer mv3 mh5">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="email" name="email" value="" placeholder="Email" style="border-color:#a29061">
+  <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="password" name="password" value="" placeholder="Password" style="border-color:#a29061">
+</div>
+<div class="home-login">
+   <input class="b f4 w4 link dim br3 ph3 pv2 mb2 dib bg-black mh6" type="submit" name="submit" value="Login" style="color:#a29061; font-family:Montaga">
 </form>
+<a href="/signup" class="black underline"><h2 class="tc b" style="font-family:Monoton"> You Dont Have account?</h2></a>
+</div>
 <p>{{message}}</p>
