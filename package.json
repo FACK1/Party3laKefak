@@ -9,7 +9,8 @@
     "test": "tape src/tests/test.js",
     "lint": "eslint ./src",
     "lint-fix": "eslint --fix ./src",
-    "eslint-init": "eslint --init ./src"
+    "eslint-init": "eslint --init ./src",
+    "db:query": "psql -U postgres -h localhost -d hmcqc -a -f ./query.sql"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "cookie": "^0.3.1",
     "cookie-parser": "^1.4.3",
     "env": "0.0.2",
     "env2": "^2.2.2",
