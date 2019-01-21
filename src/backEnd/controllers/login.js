@@ -18,12 +18,16 @@ exports.post = (req, res) => {
     raw: true,
   }).then((result) => {
     if (!result) {
+<<<<<<< Updated upstream
       res.render('login', { message: 'email not found' });
       return;
+=======
+      return res.render('login', { message: 'email not found' });
+>>>>>>> Stashed changes
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {
-        res.render('login', { message: 'email or password not match' });
+      return  res.render('login', { message: 'email or password not match' });
       }
       if (result2) {
         const token = jwt.sign({ id: result.id, email }, SECRET);

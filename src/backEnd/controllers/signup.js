@@ -29,8 +29,10 @@ exports.post = (req, res) => {
         .then(() => {
           res.render('login', { message: 'Succesfuly register' });
         }).catch(() => {
-          res.render('serverError');
+          return res.render('signup', { message: 'pleas fill the form' });
         });
     });
-  }).catch(() => res.render('serverError'));
+  }).catch(() => {
+    return res.render('signup', { message: 'pleas fill the form' });
+});
 };
