@@ -10,5 +10,7 @@ exports.get = (req, res) => {
     .then((result) => {
       res.render('service', { result });
     })
-    .catch(() => res.status(500).json({ err: 'error in query' }));
+    .catch(() => {
+      res.render('serverError');
+    });
 };
