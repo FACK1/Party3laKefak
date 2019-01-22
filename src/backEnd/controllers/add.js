@@ -17,23 +17,28 @@ exports.post = (req, res) => {
     jwt.verify(token, SECRET, (err, decoded) => {
       if (err) { throw new Error(err); }
       const userId = decoded.id;
-  serviceDetails.create({
-    name, location, description, price, image_url, userId, serviceId: 2,
-    raw: true,
-  })
-    .then((result) => {
-      media.create({
-        name, image_url, serviceDetailId: result.dataValues.id,
+      serviceDetails.create({
+        name,
+        location,
+        description,
+        price,
+        image_url,
+        userId,
+        serviceId: 2,
+        raw: true,
       })
-        .then(() => {
-          res.render('add', { message: 'addded' });
-          return;
+        .then((result) => {
+          media.create({
+            name, image_url, serviceDetailId: result.dataValues.id,
+          })
+            .then(() => {
+              return res.render('add', { message: 'addded' });
+            }).catch(() => {
+              res.render('serverError');
+            });
         }).catch(() => {
           res.render('serverError');
         });
-    }).catch(() => {
-      res.render('serverError');
     });
-      });
   }
 };
