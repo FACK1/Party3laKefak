@@ -22,7 +22,6 @@ router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 
 router.get('/profile', profile.get);
-// router.delete('/profile', profile.get);
 router.get('/logout', logout.get);
 
 router.delete('/service/:id', deleteitem.delete);

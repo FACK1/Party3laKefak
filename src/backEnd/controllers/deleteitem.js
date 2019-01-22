@@ -5,5 +5,5 @@ exports.delete = (req, res) => {
   serviceDetails.destroy({
     where: { id },
   }).then(() => res.redirect('/profile'))
-    .catch(() => res.render('serverError'));
+    .catch(() => res.json({ error: 'server error' }));
 };
