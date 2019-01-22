@@ -16,13 +16,16 @@ exports.get = (req, res) => {
         raw: true,
         include: [{
           model: user,
-          attributes: ['name'],
         }],
       })
         .then((result) => {
           res.render('profile', { result });
         })
+<<<<<<< HEAD
         .catch((error) => {
+=======
+        .catch(() => {
+>>>>>>> d6533d3ae16f2964aec547916b3bc77a920a0e41
           res.render('serverError');
         });
     });
