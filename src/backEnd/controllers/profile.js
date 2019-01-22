@@ -20,9 +20,8 @@ exports.get = (req, res) => {
       })
         .then((result) => {
           res.render('profile', { result });
-          // res.send(result);
         })
-        .catch((error) => {
+        .catch(() => {
           res.render('serverError');
         });
     });
