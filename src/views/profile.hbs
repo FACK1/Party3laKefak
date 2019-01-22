@@ -1,21 +1,21 @@
 {{>header}}
 
-{{#each result}}
-
-Name: {{user.name}}
 <form action="/logout" method="GET">
   <button type="submit" namesubmit="submit" style="background-color:rgba(0,0,0,0); border: none;" class="fr" > <img src="../assets/logout.png" alt="logout" class="w2 h2 mv2"> </button>
 </form>
 <a href="#"> <img src="../assets/editinfo.png" alt="" class="w2 h2 fr ma2"> </a>
 <a href="#"> <img src="../assets/add.png" alt="" class="w2 h2 fr ma2"> </a>
+{{#each result}}
+
+<h2 class="fl ma3 " style="color:#a29061"> {{'user.name'}}</h2>
 <hr class="mt5 gray">
-<a href="/delete/{{id}}">
-  <div class="ba w7 h5 ma3 gray">
-    <h3 class="ma2">{{name}}</h3>
-    <h3 class="fl mb2 ma2">{{location}}</h3>
-    <h3 class="fr ma2 mr4 green">{{price}}</h3>
+<a href="/delete/{{id}}" class="no-underline">
+  <div class="ba w7 h5 ma3 black">
+    <h2 class="ma2 tc ">{{name}}</h2>
+    <h3 class="fl mb2 ma2">Location : {{location}}</h3>
+    <h3 class="fr ma2 mr4 green">Price : {{price}}</h3>
     <br>
-    <img src="{{image_url}}" alt="" class="w6 h4 mt4">
+    <img src="{{image_url}}" alt="" class="w6 h4 mt3 ba bw3 ml5">
 
   </div>
 </a>

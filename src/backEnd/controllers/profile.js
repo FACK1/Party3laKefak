@@ -19,13 +19,11 @@ exports.get = (req, res) => {
         }],
       })
         .then((result) => {
-          console.log('rees', result);
-          // res.render('profile', { result });
-          res.send(result);
+          res.render('profile', { result });
+          // res.send(result);
         })
         .catch((error) => {
-          // res.render('serverError');
-          console.log('ddddddddddd', error);
+          res.render('serverError');
         });
     });
   }
