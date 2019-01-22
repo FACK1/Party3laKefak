@@ -9,7 +9,7 @@ Name: {{name}}
 <a href="#"> <img src="../assets/editinfo.png" alt="" class="w2 h2 fr ma2"> </a>
 <a href="#"> <img src="../assets/add.png" alt="" class="w2 h2 fr ma2"> </a>
 <hr class="mt5 gray">
-<a href="/delete/{{id}}">
+<a href="" onclick="confirmm({{id}})"> <img src="../assets/delete.png"   alt="" class="w2 h2 fr ma2 mr4"></a>
   <div class="ba w7 h5 ma3 gray">
     <h3 class="ma2">{{name}}</h3>
     <h3 class="fl mb2 ma2">{{location}}</h3>
@@ -18,7 +18,7 @@ Name: {{name}}
     <img src="{{image_url}}" alt="" class="w6 h4 mt4">
 
   </div>
-</a>
+
 
 {{/each}}
 

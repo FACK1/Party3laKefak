@@ -10,7 +10,7 @@
     "lint": "eslint ./src",
     "lint-fix": "eslint --fix ./src",
     "eslint-init": "eslint --init ./src",
-    "db:query": "psql -U postgres -h localhost -d hmcqc -a -f ./query.sql"
+    "db:query": "psql -U postgres -h localhost -d Party3laKefak -a -f ./query.sql"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/FACK1/Party3laKefak#readme",
   "dependencies": {
+    "alert": "^1.0.0",
+    "alert-node": "^1.2.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "cookie": "^0.3.1",
