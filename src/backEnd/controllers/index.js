@@ -7,6 +7,8 @@ const logout = require('./logout');
 const hall = require('./hall');
 const profile = require('./profile.js');
 const add = require('./add');
+const deleteitem = require('./deleteitem');
+
 
 const router = express.Router();
 
@@ -22,9 +24,10 @@ router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 
 router.get('/profile', profile.get);
-
 router.get('/logout', logout.get);
 
 router.get('/add', add.get);
 router.post('/add', add.post);
+router.delete('/service/:id', deleteitem.delete);
+
 module.exports = router;
