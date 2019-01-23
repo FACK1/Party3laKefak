@@ -1,19 +1,17 @@
 {{>header}}
 <div class="outerContainer">
 <form action="/add" method="POST">
-  <h1 class="tc b" style="font-family:Monoton">add service</h1>
+  <h1 class="tc b" style="font-family:Monoton">Add Service</h1>
   <div class="inputsContainer mv3 mh5">
   <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="name" value="" placeholder="Name" style="border-color:#a29061">
   <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="location" value="" placeholder="location" style="border-color:#a29061">
   <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="description" value="" placeholder="description" style="border-color:#a29061">
   <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="price" value="" placeholder="price" style="border-color:#a29061">
   <input class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text" name="image_url" value="" placeholder="image" style="border-color:#a29061">
-
   <input id="loc" class="f4 ba ph3 ma1 tc br3 bw1 mt3" type="text"  name="map_loc" value="" placeholder="map_loc" style="border-color:#a29061">
 
 </div>
 <div id="mapid" style="height:250px;"></div>
-
-  <input class="b f4 w4 link dim br3 ph3 pv2 mb2 dib bg-black mh6" type="submit" name="submit" value="Sign up" style="color:#a29061; font-family:Montaga">
+  <input class="b f4 w4 link dim br3 ph3 pv2 mb2 dib bg-black mh6 " type="submit" name="submit" value="Add" style="color:#a29061; font-family:Montaga">
 </form>
 <p>{{message}}</p>
