@@ -64,6 +64,7 @@ Goes to a home page, you wil see the services click on any one like 'hall' ,it w
                     |_ services.js
                     |_ user.js
     |__ backEnd
+              |_ controller
               |_ app.js
               |_ server.js
     |__ frontEnd
