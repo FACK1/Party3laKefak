@@ -17,9 +17,9 @@ Follow these instruction in order:
 
 2- Clone this repository.
 
-  Using HTTP: git@github.com:FACK1/Party3laKefak.git
+  > Using HTTP: git@github.com:FACK1/Party3laKefak.git
   
-  Using SSH: https://github.com/FACK1/Party3laKefak.git
+  > Using SSH: https://github.com/FACK1/Party3laKefak.git
 
 3- Create Database with username and password
 
