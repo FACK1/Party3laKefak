@@ -25,7 +25,7 @@ exports.get = (req, res) => {
           return res.render('profile', { result });
         })
         .catch(() => {
-          res.render('serverError');
+          res.render('serverError', { message: 'No Data Exists ' });
         });
     });
   }

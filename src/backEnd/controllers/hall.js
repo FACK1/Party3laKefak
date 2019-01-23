@@ -24,6 +24,6 @@ exports.get = (req, res) => {
     return res.render('hall', { filteredResult });
   })
     .catch(() => {
-      res.render('serverError');
+      res.render('serverError', { message: 'No Hall exists! ' });
     });
 };

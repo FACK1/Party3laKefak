@@ -6,6 +6,6 @@ exports.delete = (req, res) => {
     where: { id },
   }).then(() => res.redirect('/profile'))
     .catch(() => {
-      res.render('serverError');
+      res.render('serverError', { message: 'Not Item Exists! ' });
     });
 };

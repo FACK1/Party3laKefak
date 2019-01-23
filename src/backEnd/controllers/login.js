@@ -29,5 +29,5 @@ exports.post = (req, res) => {
         return res.cookie('logged_in', token, { maxAge: 999999999 }).redirect('/profile');
       }
     });
-  }).catch(() => res.render('login', { message: 'email not found' }));
+  }).catch(() => res.render('login', { message: 'Email not found' }));
 };

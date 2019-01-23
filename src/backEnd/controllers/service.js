@@ -13,5 +13,7 @@ exports.get = (req, res) => {
       }
       return res.render('service', { result });
     })
-    .catch(() => res.render('serverError'));
+    .catch(() => {
+      res.render('serverError', { message: 'No Services exists! ' });
+    });
 };

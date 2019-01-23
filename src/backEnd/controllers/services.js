@@ -12,6 +12,6 @@ exports.get = (req, res) => {
       return res.render('home', { result });
     })
     .catch(() => {
-      res.render('serverError');
+      res.render('serverError', { message: 'No Services exists ' });
     });
 };

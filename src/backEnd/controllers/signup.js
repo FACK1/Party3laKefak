@@ -7,7 +7,7 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const {
-    name, email, password, phone_number, facebook, confirm_password
+    name, email, password, phone_number, facebook, confirm_password,
   } = req.body;
   user.findOne({
     where: { email },
@@ -28,11 +28,7 @@ exports.post = (req, res) => {
       })
         .then(() => {
           res.render('login', { message: 'Succesfuly register' });
-        }).catch(() => {
-          return res.render('signup', { message: 'pleas fill the form' });
-        });
+        }).catch(() => res.render('signup', { message: 'pleas fill the form' }));
     });
-  }).catch(() => {
-    return res.render('signup', { message: 'pleas fill the form' });
-});
+  }).catch(() => res.render('signup', { message: 'Please fill the form' }));
 };
