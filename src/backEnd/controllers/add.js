@@ -25,15 +25,16 @@ exports.post = (req, res) => {
         price,
         image_url,
         userId,
-        serviceId: 2,
+        serviceId: 1,
         raw: true,
       })
         .then((result) => {
           media.create({
             name, image_url, serviceDetailId: result.dataValues.id,
           })
-            .then(() => res.render('add', { message: 'addded' }))
-            .catch(() => res.render('serverError'));
+            .then(() => res.render('add', { message: 'addded' })).catch(() => {
+              res.render('serverError');
+            });
         }).catch(() => {
           res.render('serverError');
         });
