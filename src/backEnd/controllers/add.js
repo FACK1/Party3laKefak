@@ -36,7 +36,7 @@ exports.post = (req, res) => {
               res.render('serverError');
             });
         }).catch(() => {
-          res.render('serverError');
+          res.render('serverError', { message: 'No services exists ' });
         });
     });
   }

@@ -5,5 +5,7 @@ exports.delete = (req, res) => {
   serviceDetails.destroy({
     where: { id },
   }).then(() => res.redirect('/profile'))
-    .catch(() => res.json({ error: 'server error' }));
+    .catch(() => {
+      res.render('serverError', { message: 'Not Item Exists! ' });
+    });
 };

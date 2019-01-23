@@ -16,14 +16,14 @@ exports.get = (req, res) => {
     }],
   }).then((result) => {
     if (!result || result.length === 0) {
-      res.render('hall', { message: 'No Results Exists !' });
+      return res.render('hall', { message: 'No Results Exists !' });
     }
     const details = result[0].service_detail.dataValues;
     const images = result.map(value => value.image_url);
     const filteredResult = [{ images, details }];
-    res.render('hall', { filteredResult });
+    return res.render('hall', { filteredResult });
   })
     .catch(() => {
-      res.render('serverError');
+      res.render('serverError', { message: 'No Hall exists! ' });
     });
 };
