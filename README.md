@@ -46,6 +46,10 @@ Follow these instruction in order:
 7- Open the app by write in your browser `http://localhost:<your port>/`
 
 
+# Flow of the app:
+
+Goes to a home page, you wil see the services click on any one like 'hall' ,it will give us all services that related to 'hall', then click on one of then ,it will give us all details of this service, and you can sign up and login to add aservice and delete Existing one.
+
  # File Structure 
   ```
 - Src
