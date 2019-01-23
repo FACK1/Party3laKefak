@@ -2,9 +2,12 @@ const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bp = require('body-parser');
+const compression = require('compression');
 const helpers = require('../views/helpers/helper');
 const routes = require('./controllers');
 
+
+app.use(compression());
 const app = express();
 app.use(express.static(path.join(__dirname, '..', '..', 'public')));
 app.use(bp.json());
