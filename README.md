@@ -13,6 +13,7 @@
 # How to run our app on your local machine?
 
 Follow these instruction in order:
+
 1- Open your terminal.
 
 2- Clone this repository.
