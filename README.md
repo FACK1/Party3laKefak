@@ -18,6 +18,7 @@ Follow these instruction in order:
 2- Clone this repository.
 
   Using HTTP: git@github.com:FACK1/Party3laKefak.git
+  
   Using SSH: https://github.com/FACK1/Party3laKefak.git
 
 3- Create Database with username and password
@@ -25,12 +26,18 @@ Follow these instruction in order:
 4- Make a new file in the root directory Party3laKefak, and call it .env
 
    Copy paste the following in your .env file:
-    DB_HOST=<any port you want>
-    DB_NAME = <your database name>
-    DB_USER = <your user name>
-    DB_PASS = <your user password>
-    DB_DIALECT = <your database method>
-    SECRET= <any secert you want>
+   
+   DB_HOST= any port you want
+   
+   DB_NAME = your database name
+   
+   DB_USER = your user name
+   
+   DB_PASS = your user password
+   
+   DB_DIALECT = your database method
+   
+   SECRET= any secert you want
   
 5- Install dependencies and dev dependencies; by typing in the terminal npm i.
 
