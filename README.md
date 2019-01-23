@@ -85,6 +85,11 @@ Goes to a home page, you wil see the services click on any one like 'hall' ,it w
   - es6
   - semicolon 
   - double quotes
+  
+  # Team Member :
+  - Hadeel Slamen
+  - Aman Shawar
+  - Sama Amro
 
   
   
