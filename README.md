@@ -10,6 +10,46 @@
   - As a logged user (Company) I can see my halls and there details ,add hall,edit or delete it .
   - As a user I can go back from every page to home page or to a previous page .
 
+# How to run our app on your local machine?
+
+Follow these instruction in order:
+1- Open your terminal.
+
+2- Clone this repository.
+
+  > Using HTTP: git@github.com:FACK1/Party3laKefak.git
+  
+  > Using SSH: https://github.com/FACK1/Party3laKefak.git
+
+3- Create Database with username and password
+
+4- Make a new file in the root directory Party3laKefak, and call it .env
+
+   Copy paste the following in your .env file:
+   
+   DB_HOST= any port you want
+   
+   DB_NAME = your database name
+   
+   DB_USER = your user name
+   
+   DB_PASS = your user password
+   
+   DB_DIALECT = your database method
+   
+   SECRET= any secert you want
+  
+5- Install dependencies and dev dependencies; by typing in the terminal npm i.
+
+6- Run on your termial npm run dev
+
+7- Open the app by write in your browser `http://localhost:<your port>/`
+
+
+# Flow of the app:
+
+Goes to a home page, you wil see the services click on any one like 'hall' ,it will give us all services that related to 'hall', then click on one of then ,it will give us all details of this service, and you can sign up and login to add aservice and delete Existing one.
+
  # File Structure 
   ```
 - Src
@@ -44,5 +84,6 @@
   - es6
   - semicolon 
   - double quotes
- # How you will handle Async ?
-  - Async/Wait
+
+  
+  
