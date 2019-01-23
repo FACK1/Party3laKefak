@@ -13,6 +13,7 @@
 # How to run our app on your local machine?
 
 Follow these instruction in order:
+
 1- Open your terminal.
 
 2- Clone this repository.
@@ -84,6 +85,11 @@ Goes to a home page, you wil see the services click on any one like 'hall' ,it w
   - es6
   - semicolon 
   - double quotes
+  
+  # Team Member :
+  - Hadeel Slamen
+  - Aman Shawar
+  - Sama Amro
 
   
   
