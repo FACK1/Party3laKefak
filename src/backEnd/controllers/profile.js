@@ -19,7 +19,10 @@ exports.get = (req, res) => {
         }],
       })
         .then((result) => {
-          res.render('profile', { result });
+          if (!result || result.length === 0) {
+            return res.render('profile', { message: 'No Results Exists !' });
+          }
+          return res.render('profile', { result });
         })
         .catch(() => {
           res.render('serverError');

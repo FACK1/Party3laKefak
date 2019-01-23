@@ -1,7 +1,8 @@
-const { serviceDetails, media } = require('../../database/models');
 
 const jwt = require('jsonwebtoken');
 const cookie = require('cookie');
+const { serviceDetails, media } = require('../../database/models');
+
 const { SECRET } = process.env;
 
 exports.get = (req, res) => {
@@ -10,7 +11,7 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const {
-    name, location, description, price, image_url
+    name, location, description, price, image_url,
   } = req.body;
   if (req.headers.cookie) {
     const token = cookie.parse(req.headers.cookie).logged_in;
@@ -31,11 +32,8 @@ exports.post = (req, res) => {
           media.create({
             name, image_url, serviceDetailId: result.dataValues.id,
           })
-            .then(() => {
-              return res.render('add', { message: 'addded' });
-            }).catch(() => {
-              res.render('serverError');
-            });
+            .then(() => res.render('add', { message: 'addded' }))
+            .catch(() => res.render('serverError'));
         }).catch(() => {
           res.render('serverError');
         });

@@ -22,14 +22,12 @@ exports.post = (req, res) => {
     }
     bcrypt.compare(password, result.password, (err, result2) => {
       if (err) {
-      return  res.render('login', { message: 'email or password not match' });
+        return res.render('login', { message: 'email or password not match' });
       }
       if (result2) {
         const token = jwt.sign({ id: result.id, email }, SECRET);
-        res.cookie('logged_in', token, { maxAge: 999999999 }).redirect('/profile');
+        return res.cookie('logged_in', token, { maxAge: 999999999 }).redirect('/profile');
       }
     });
-  }).catch(() => {
-    res.render('login', { message: 'email not found' });
-  });
+  }).catch(() => res.render('login', { message: 'email not found' }));
 };

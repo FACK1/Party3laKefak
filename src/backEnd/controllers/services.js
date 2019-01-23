@@ -6,11 +6,12 @@ exports.get = (req, res) => {
     raw: true,
   })
     .then((result) => {
-      res.render('home', { result });
+      if (!result || result.length === 0) {
+        return res.render('home', { message: 'No Results Exists !' });
+      }
+      return res.render('home', { result });
     })
     .catch(() => {
-      res.status(500).json(
-        { err: 'error in query' },
-      );
+      res.render('serverError');
     });
 };
