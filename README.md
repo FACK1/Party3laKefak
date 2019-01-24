@@ -42,9 +42,11 @@ Follow these instruction in order:
   
 5- Install dependencies and dev dependencies; by typing in the terminal npm i.
 
-6- Run on your termial npm run dev
+6- Run on your termial npm run db:query
 
-7- Open the app by write in your browser `http://localhost:<your port>/`
+7- Run on your termial npm run dev
+
+8- Open the app by write in your browser `http://localhost:<your port>/`
 
 
 # Flow of the app:
