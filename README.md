@@ -42,7 +42,8 @@ Follow these instruction in order:
   
 5- Install dependencies and dev dependencies; by typing in the terminal npm i.
 
-6- Run on your termial npm run db:query
+6- Run on your termial ```npm run db:query``` to add data to db,but change in Package.json :
+  > "db:query": "psql -U [username] -d [DB name] -a -f ./query.sql"
 
 7- Run on your termial npm run dev
 
